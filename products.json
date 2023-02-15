@@ -1,0 +1,119 @@
+{"products": [
+    {
+        "productId":1,
+        "imageUrl": "../assets/KitchenStoryImages/burger.jpeg",
+        "productName": "Burger",
+        "price": 100
+    },
+    {
+        "productId":2,
+        "imageUrl": "../assets/KitchenStoryImages/Pizza.jpg",
+        "productName": "Pizza",
+        "price": 125
+    },
+    {
+        "productId":3,
+        "imageUrl": "../assets/KitchenStoryImages/Samosas.jpg",
+        "productName": "Samosa",
+        "price": 50
+    },
+    {
+        "productId":4,
+        "imageUrl": "../assets/KitchenStoryImages/frenchfries.jpg",
+        "productName": "French Fries",
+        "price": 80
+    },
+    {
+        "productId":5,
+        "imageUrl": "../assets/KitchenStoryImages/momos.jpeg",
+        "productName": "Momos",
+        "price": 60
+       
+    },
+    {
+        "productId":6,
+        "imageUrl": "../assets/KitchenStoryImages/mayonnaise-sandwich.jpg",
+        "productName": "Sandwich ",
+        "price": 80
+    },
+    {
+        "productId":7,
+        "imageUrl": "../assets/KitchenStoryImages/veg-manchurian.png",
+        "productName": "Veg Manchurian",
+        "price":150
+    },
+    {
+        "productId":8,
+        "imageUrl": "../assets/KitchenStoryImages/chicken-manchurian.jpg",
+        "productName": "Chicken Manchurain ",
+        "price": 175
+        
+    },
+    {
+        "productId":9,
+        "imageUrl": "../assets/KitchenStoryImages/fried-chicken.jpeg",
+        "productName": "Fried Chicken ",
+        "price": 150
+    },
+    {
+        "productId":10,
+        "imageUrl": "../assets/KitchenStoryImages/chicken-biryani.jpeg",
+        "productName": "Chicken Biryani",
+        "price": 150
+    },
+    
+    {
+        "productId":11,
+        "imageUrl": "../assets/KitchenStoryImages/breadsticks.jpeg",
+        "productName": "Bread Sticks ",
+        "price": 100
+    },
+    {
+        "productId":12,
+        "imageUrl": "../assets/KitchenStoryImages/egg-biryani.jpeg",
+        "productName": "Egg Biryani",
+        "price": 100
+    },
+    {
+        "productId":13,
+        "imageUrl": "../assets/KitchenStoryImages/burger.jpeg",
+        "productName": "Global Blend Mild Extra ",
+        "price": 7.70
+    },
+    {
+        "productId":14,
+        "imageUrl": "../assets/KitchenStoryImages/burger.jpeg",
+        "productName": "Global Blend Mild Extra ",
+        "price": 7.70
+    },
+    {
+        "productId":15,
+        "imageUrl":"../assets/KitchenStoryImages/burger.jpeg",
+        "productName": "Global Blend Mild Extra ",
+        "price": 7.70
+    },
+    {
+        "productId":16,
+        "imageUrl":"../assets/KitchenStoryImages/burger.jpeg",
+        "productName": "Global Blend Mild Extra ",
+        "price": 7.70
+    }
+],
+"Users":[
+    {
+        "userId":1,
+        "username":"Jansi@gmail.com",
+        "password":"Jansi@123"
+    },
+    {
+        "userId":2,
+        "username":"Naganjali@gmail.com",
+        "password":"Naganjali@123"
+    },
+    {
+        "userId":3,
+        "username":"Abhi@gmail.com",
+        "password":"Abhi@123"
+    }
+]
+}

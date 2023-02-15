@@ -1,0 +1,23 @@
+
+<div class="container-fluid mt-5">
+    <form class="d-flex mx-5 pt-5 col-lg-3">
+         <input type="text" class="form-control me-2" id="search-text" aria-describedby="search-text" 
+        [(ngModel)]="searchText" placeholder="Search" name="searchText" autofocus>
+        <button class="btn btn-outline-success" (click)="performFilter(searchText)"  type="submit" >Search</button>
+      </form>
+    <div class="row mx-4">
+        <div *ngFor="let p of filteredData" class="col-md-4 col-sm-6 col-lg-3 p-4 mt-3" id="productCard">
+            <div class="card shadow" opacity="opacity:0.8">
+                <img class="card-img-top" src="{{p.imageUrl}}" height="200px" alt="{{p.productId}}">
+                <div class="card-body text text-center">
+                    <h3 class="card-title"><i>{{p.productName}}</i></h3>
+                    <h5>{{p.price | currency:'INR'}}</h5>
+                    <a class="btn btn-primary" (click)="buyNow(p.productId)">Buy Now</a>
+                </div>
+            </div>  
+        </div>
+    </div>
+    <div class=" justify-content-center m-5">
+        <h3 class=" card justify-content-center m-5 p-5">{{errorMessage}}</h3>
+    </div>
+</div>

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Output,EventEmitter } from '@angular/core';
+
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'KitchenStory';
+  public keyword!:string;
+  @Output() search = new EventEmitter<String>();
+  searchKeyword(){
+    this.search.emit(this.keyword);
+  }
 }

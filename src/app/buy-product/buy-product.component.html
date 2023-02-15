@@ -1,0 +1,68 @@
+<div class="fluid-container row mt-5 pt-5">
+    <div class="col-md-2"></div>
+    <div class="card col-md-7 m-5 p-5">
+        <div class="d-flex row">
+            <div class="image col-md-6"  >
+               <img class="img-fluid rounded mx-auto" src="{{selectedProduct.imageUrl}}" alt="{{selectedProduct.productName}}">
+            </div>
+            <div class=" mt-5 justify-content-center col-md-4">  
+                <h2 class=""><span class="float-left h3">Item Name : </span><i> {{selectedProduct.productName}}</i></h2>
+                <h3><span class="float-left h3">Price : </span><i>{{selectedProduct.price | currency:"INR"}}</i></h3>
+                <h3 > Quantity: {{quantity}}</h3>  
+                <div class="input-group">
+                    <span class="h3"> Total Amount: {{Amount | currency:"INR"}}</span>
+                    <div class="input-group mx-5 mt-3"> 
+                        <button class="btn btn-outline-danger" (click)="decreaseValue()" type="button"><b>-</b></button>
+                        <input type="number" disabled class="form-group" style="width: 3em" id="number" value="1" [(ngModel)]="quantity">
+                            <button class="btn btn-outline-success" (click)="increaseValue()" type="button"><b>+ </b></button>
+                    </div> <br>
+                </div> 
+                
+            </div>
+            <div class="col-md-2" ></div>
+        </div>
+        <div class="row">
+            <div class="col-sm-10"></div>
+            <div class="col-sm-2">
+                <a class="btn btn-primary" (click)="popup = true">Pay Now</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="overlay mt-4 mx-5" *ngIf="popup">
+	<div class="popup">
+		<h2 class="mx-5">Payment GateWay</h2>
+		<a class="close" (click)="popup = false">&times;</a>
+		<div class="content">
+            <form [formGroup]="paymentForm" class="form-group" (ngSubmit)="payNow()">
+                    <div class="col-md-9 mx-5">
+                        <input type="email" class="form-control mt-5"  id="emailId" placeholder="Enter your Email" name="emailId" formControlName="emailId">
+                        <div class="mt-2" *ngIf="paymentForm.controls.emailId.invalid && paymentForm.controls.emailId.errors">
+                            <span class="text-danger" *ngIf="paymentForm.controls.emailId.errors">*Email id is Required!</span> 
+                        </div>
+                         
+                        <input type="tel" class="form-control mt-2" (keypress)="numberOnly($event)" maxlength="12" placeholder="Enter your Card Number" fromControlName="cardNumber">
+                        <div class="mt-2" *ngIf="paymentForm.controls.cardNumber.invalid || paymentForm.controls.cardNumber.errors">
+                            <span class="text-danger" *ngIf="paymentForm.controls.cardNumber.errors">*Card Number is Required!</span> 
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-md-9">
+                                <div class="input-group">
+                                    <input type="month" class="form-control" placeholder="Exp Date"/>
+                                    
+                                    <input type="tel" (keypress)="numberOnly($event)" maxlength="3" class="form-control" placeholder="CVV"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-3 me-4">
+                            <div class="col-md-5"></div>
+                            <div class="col-md-6 me-3">
+                                <button class="btn btn-success" type="submit" [disabled]="paymentForm.invalid" >{{Amount | currency:'INR' : 'symbol' : '2.0-2'}} Pay Now</button>
+                            </div>
+                        </div>
+                        
+                    </div>
+            </form>
+		</div>
+	</div>
+</div>
